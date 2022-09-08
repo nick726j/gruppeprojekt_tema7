@@ -30,9 +30,9 @@ header {
 
 .logo {
   cursor: pointer;
-  height: 30%;
   width: 30%;
   border: none;
+  margin: auto;
 }
 
 .search {
@@ -296,7 +296,6 @@ header {
 
   .logo {
     cursor: pointer;
-    height: 12%;
     width: 12%;
     border: none;
   }
