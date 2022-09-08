@@ -68,7 +68,6 @@ header {
 }
 .container123 {
   width: 90%;
-  height: 100%;
   margin: 0 auto;
   display: grid;
 }
@@ -79,7 +78,6 @@ header {
   width: 90%;
   justify-content: end;
   color: white;
-  margin-bottom: 60%;
   text-shadow: 1px 1px 8px rgba(58, 58, 58, 0.718);
 }
 .info div {
@@ -232,9 +230,6 @@ header {
     width: 50%;
     justify-content: center;
     color: white;
-  }
-  .info div {
-    margin-top: 50%;
   }
 
   .udforsk {
