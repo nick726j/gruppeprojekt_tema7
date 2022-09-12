@@ -58,7 +58,7 @@ header {
 }
 
 #hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(../IMG/forside_billede2.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(IMG/forside_billede2.webp);
   background-size: cover;
   max-width: none;
   max-width: 100%;
@@ -315,7 +315,7 @@ header {
     margin-left: 3%;
   }
   #hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(../IMG/forside_billede2.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(IMG/forside_billede2.webp);
     background-size: cover;
     max-width: none;
     max-width: 100%;
