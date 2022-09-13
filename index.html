@@ -1,51 +1,57 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <title>Thrift Llama</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section id="hero">
-      <header>
-        <div class="menu1">
-          <nav>
-            <div class="content_menu">
-              <ul>
-                <li><a href="produktside_placeholder.html">SHOP</a></li>
-                <li><a href="side3.html">OM OS</a></li>
-                <li><a href="side4.html">KONTAKT</a></li>
-              </ul>
-            </div>
-          </nav>
+    <header id="header-nav">
+      <nav>
+        <div class="wrapper">
+          <div class="col">
+            <ul class="nav-shop">
+              <li><a href="produktside-placeholder.html">SHOP</a></li>
+              <li><a href="side3.html">OM OS</a></li>
+              <li><a href="side4.html">KONTAKT</a></li>
+            </ul>
+            <ul class="nav-login">
+              <li><a href="#">SØG</a></li>
+              <li><a href="#">LOGIN</a></li>
+              <li><a href="#">LOVE</a></li>
+              <li><a href="#">KURV</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="kurvlogin">
-          <ul>
-            <li><a href="side3.html">KURV</a></li>
-            <li><a href="side4.html">LOGIN</a></li>
+      </nav>
+    </header>
+    <main>
+      <div class="udforsk-container">
+        <div class="udforsk">
+          <div class="trigger-container">
+            <div class="trigger"></div>
+          </div>
+          <ul class="butik">
+            <li class="shop">Shop</li>
+            <li class="anna">
+              <a href="#" onmouseover="changeImage('anna')">Anna</a>
+            </li>
+            <li class="louise"><a href="#" onmouseover="changeImage('louise')">Louise</a></li>
+            <li class="lukas"><a href="#" onmouseover="changeImage('lukas')">Lukas</a></li>
+            <li class="maria"><a href="#" onmouseover="changeImage('maria')">Maria</a></li>
+            <li class="nicklas"><a href="#" onmouseover="changeImage('nicklas')">Nicklas</a></li>
           </ul>
         </div>
-        <div id="hamburger">
-          <div></div>
-        </div>
-      </header>
-      <div class="logo">
-        <a href="index.html"><img src="../IMG/logo.png" alt="Llama" /></a>
+        <div class="space"></div>
       </div>
-      <div class="container123">
-        <div class="info">
-          <div class="udforsk">UDFORSK</div>
-          <ul class="forside_ul">
-            <li class="forside_li"><a href="side2.html"></a>NY KOLLEKTION</li>
-            <li class="forside_li"><a href="side2.html"></a>DRESS UP</li>
-            <li class="forside_li"><a href="side2.html"></a>COLLECTIONS</li>
-            <li class="forside_li"><a href="side2.html"></a>#LEVEIT</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    </main>
+    <footer>butt</footer>
   </body>
 </html>
