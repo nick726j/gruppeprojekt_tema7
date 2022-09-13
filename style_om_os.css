@@ -1,0 +1,193 @@
+header {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 1rem;
+  transition: all 0.5s cubic-bezier(0, 0.7, 0.3, 1);
+  color: white;
+  background: linear-gradient(to bottom, #25211e 0, rgba(37, 33, 30, 0) 100%);
+}
+
+header:hover {
+  background: #fff;
+}
+
+.header-active {
+  background: #fff;
+}
+
+header:hover a,
+.header-active a {
+  color: black;
+}
+
+.header-nav {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -7.5px;
+  margin-right: -7.5px;
+}
+
+.col {
+  display: flex;
+  position: static;
+  align-items: stretch;
+  justify-content: space-between;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  text-decoration: none;
+}
+
+.nav-login,
+.nav-shop {
+  display: block;
+  align-items: left;
+  display: flex;
+  font-size: 0.75rem;
+}
+
+.nav-login li {
+  display: block;
+  margin-left: 1rem;
+}
+
+.nav-shop li {
+  display: block;
+  margin-right: 1rem;
+}
+
+body {
+  background-color: black;
+}
+
+.udforsk-container {
+  position: relative;
+  margin-top: 55vh;
+  width: 100%;
+}
+
+.udforsk {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+.trigger-container {
+  position: sticky;
+  top: calc(100vh - 34vh);
+  left: 0;
+}
+
+.trigger {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #fff;
+  width: 20px;
+}
+
+.butik {
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  overflow-x: hidden;
+  margin-top: 5vh;
+}
+
+.butik li {
+  font-size: 2rem;
+  margin: 37px 40px 37px 20px;
+}
+
+.butik li:first-child {
+  font-size: 1rem;
+  margin: 5vh 20px 37px;
+}
+
+.butik li:last-child {
+  font-size: 2rem;
+  margin: 37px 40px 0px 20px;
+  line-height: 1.5 0;
+  padding: 0;
+}
+
+.item:hover {
+  font-size: 3rem;
+}
+
+.space {
+  height: 100px;
+}
+
+footer {
+  height: 400px;
+  background: #f6f6f6;
+  color: #000;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -7.5px;
+  margin-right: -7.5px;
+}
+
+.valgt a {
+  font-size: 3rem;
+}
+
+element {
+  background: none;
+}
+
+.big-logo img {
+  display: block;
+  position: fixed;
+  margin-top: 50px;
+  width: 15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.small-logo img {
+  display: block;
+  position: fixed;
+  margin-top: 50px;
+  width: 15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media (min-width: 915px) {
+}
+
+@media (min-width: 1080px) {
+  .trigger-container {
+    display: none;
+  }
+  .udforsk-container {
+    position: relative;
+    margin-top: 35vh;
+    width: 100%;
+  }
+}
