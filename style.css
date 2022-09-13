@@ -235,7 +235,6 @@ element {
   display: block;
   position: fixed;
   margin-top: 50px;
-  width: 15vw;
   left: 50%;
   transform: translate(-50%, 0);
 }
