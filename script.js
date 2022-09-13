@@ -21,6 +21,7 @@ window.onscroll = function (evt) {
   });
 
   var navBar = document.getElementById("header-nav");
+  var logoBar = document.getElementsByClassName("big-logo");
   if (window.scrollY > 350) {
     navBar.classList.add("header-active");
   } else {
