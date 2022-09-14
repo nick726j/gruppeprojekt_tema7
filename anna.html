@@ -8,120 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
-    <title>Document</title>
-    <script src="script.js" defer></script>
+    <title>Anna</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="stylesheet" href="produkt.css" /> -->
+    <link rel="stylesheet" href="produkt.css" />
     <style>
-      #holder {
+      .data-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 2em;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
       }
 
-      body {
-        background-image: none;
-        background-color: white;
-      }
-
-      /* #holder {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 2em;
-      } */
-      article {
-        border: 1px solid black;
-        padding: 1em;
-      }
-
-      img {
-        max-width: 100%;
-        aspect-ratio: 1/1;
-      }
-
-      h1 {
-        color: black;
-        font-size: 4em;
-        font-family: cooper;
-      }
-
-      .first {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-auto-rows: minmax(100px, auto);
-        min-height: 400px;
-        padding-top: 4em;
-        padding-inline: 1em;
-      }
-
-      .first :nth-child(1) {
-        grid-column: 1/12;
-        grid-row: 1;
-
-        text-align: center;
-      }
-
-      .first :nth-child(2) {
-        grid-column: 2/11;
-        grid-row: 2;
-      }
-
-      .first :nth-child(3) {
-        grid-column: 1/12;
-        grid-row: 3;
-      }
-
-      @media screen and (min-width: 760px) {
-        .first :nth-child(1) {
-          grid-column: 1/6;
-          grid-row: 1;
-          text-align: center;
-          align-self: center;
-        }
-
-        .first :nth-child(2) {
-          grid-column: 6/12;
-          grid-row: 1;
-          align-self: center;
-        }
-
-        h1 {
-          font-size: 6rem;
-        }
-      }
-
-      @media screen and (min-width: 992px) {
-        h1 {
-          font-size: 8rem;
-        }
-
-        .produkt-billede {
-          min-width: none;
-        }
-      }
-
-      /* .nav {
+      .article {
         display: flex;
-        justify-content: end;
-        align-items: end;
-
-        text-align: center;
-        place-content: center;
-        cursor: pointer;
-      } */
-      .filterKnap {
-        color: black;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 338px;
+        padding: 10px;
         background-color: white;
-        padding-inline: 1.5em;
-        margin: 1em;
-        border: solid 0.1px black;
-        filter: drop-shadow(5px 5px 4px #000000);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      .picture {
+        max-width: 100%;
+        object-fit: cover;
+        max-height: 338px;
       }
     </style>
   </head>
   <body>
-    <!-- <main id="holder"></main> -->
-
     <header id="header-nav">
       <nav>
         <div class="wrapper">
@@ -148,13 +62,117 @@
         <img src="IMG/anna_lp.jpg" alt="anna" class="produkt-billede" />
 
         <nav class="nav">
-          <button class="filterKnap valgt" data-kategori="alle">Alle</button>
-          <button class="filterKnap" data-kategori="forretter">Bukser</button>
-          <button class="filterKnap" data-kategori="hovedretter">Jakker</button>
-          <button class="filterKnap" data-kategori="desserter">Bluser</button>
-          <button class="filterKnap" data-kategori="drikkevarer">Sko</button>
+          <button class="filterKnap valgt" data-Type="alle">Alle</button>
+          <button class="filterKnap" data-Type="Bukser">Bukser</button>
+          <button class="filterKnap" data-Type="Jakke">Jakker</button>
+          <button class="filterKnap" data-Type="Bluse">Bluser</button>
+          <button class="filterKnap" data-Type="Sko">Sko</button>
         </nav>
       </div>
+      <section id="popup">
+        <article class="article">
+          <img class="picture" src="" alt="" />
+          <div id="luk"></div>
+          <p class="type"></p>
+          <h2 class="maerke"></h2>
+          <p class="stoerrelse"></p>
+          <div class="dots"></div>
+          <p class="farve"></p>
+          <p class="dot_space">...</p>
+          <p class="pris"></p>
+        </article>
+      </section>
+      <article id="liste">
+        <section class="data-container"></section>
+        <template>
+          <section class="article" id="menu">
+            <article class="col-1"><img class="picture" src="" alt="" /></article>
+            <article class="col-2">
+              <h2 class="maerke"></h2>
+              <ul>
+                <li>
+                  <p class="type"></p>
+                </li>
+                <li>
+                  <p class="stoerrelse"></p>
+                </li>
+                <li>
+                  <p class="farve"></p>
+                </li>
+              </ul>
+              <p class="pris"></p>
+            </article>
+          </section>
+        </template>
+      </article>
     </main>
+    <script>
+      const fil = "https://thriftllama-f2e6.restdb.io/rest/kollektion";
+      const mereInfo = {
+        headers: {
+          "x-apikey": "6320629ffdc15b0265f1738a",
+        },
+      };
+
+      document.addEventListener("DOMContentLoaded", start);
+      let filter = "alle";
+      let json;
+
+      function start() {
+        const filterKnapper = document.querySelectorAll("nav button");
+        filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerRetter));
+        hentData();
+      }
+
+      function filtrerRetter() {
+        filter = this.dataset.type;
+        document.querySelector(".valgt").classList.remove("valgt");
+        this.classList.add("valgt");
+        vis(json);
+      }
+
+      async function hentData(fil) {
+        const result = await fetch(fil, mereInfo);
+        json = await result.json();
+        console.log(json);
+        vis(json);
+      }
+      function vis(json) {
+        const container = document.querySelector(".data-container");
+        const retTemplate = document.querySelector("template");
+        container.textContent = "";
+        json.forEach((toj) => {
+          if (toj.ejer == "Anna") {
+            if (filter == toj.type || filter == "alle") {
+              const klon = retTemplate.cloneNode(true).content;
+              klon.querySelector(".type").textContent = toj.type;
+              klon.querySelector(".maerke").textContent = toj.maerke;
+              klon.querySelector(".stoerrelse").textContent = toj.stoerrelse;
+              klon.querySelector(".picture").src = "produktbilleder/" + toj.billednavn;
+              klon.querySelector(".picture").alt = toj.billednavn;
+              klon.querySelector(".farve").textContent = toj.farve;
+              klon.querySelector(".pris").textContent = toj.pris + " kr";
+              klon.querySelector(".article").addEventListener("click", () => visDetaljer(toj));
+              container.appendChild(klon);
+            }
+          }
+        });
+      }
+
+      function visDetaljer(toj) {
+        popup.style.display = "flex";
+        popup.querySelector(".type").textContent = toj.type;
+        popup.querySelector(".maerke").textContent = toj.maerke;
+        popup.querySelector(".stoerrelse").textContent = toj.stoerrelse;
+        popup.querySelector(".picture").src = "produktbilleder/" + toj.billednavn;
+        popup.querySelector(".picture").alt = toj.billednavn;
+        popup.querySelector(".farve").textContent = toj.farve;
+        popup.querySelector(".pris").textContent = toj.pris + " kr";
+      }
+
+      document.querySelector("#luk").addEventListener("click", () => (popup.style.display = "none"));
+
+      hentData(fil);
+    </script>
   </body>
 </html>
