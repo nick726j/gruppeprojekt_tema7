@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Cooper Black";
+  src: url("fonts/COOPBL.TTF") format("truetype");
+}
+
 * {
   margin: 0;
 }
