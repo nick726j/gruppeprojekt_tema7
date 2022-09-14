@@ -23,7 +23,9 @@
         background-color: whitesmoke;
         border: solid 0.01in #48cc7e;
         background-image: url("IMG/footer.jpg");
-        height: clamp(800px, 60, 500vh);
+        background-size: cover;
+        background-clip: inherit;
+        height: clip(200px, 40, 500vh);
       }
 
       @media (max-width: 600px) {
@@ -41,7 +43,7 @@
         }
 
         .col3 {
-          padding-block: 1.5rem;
+          display: none;
         }
 
         .footer_logo {
