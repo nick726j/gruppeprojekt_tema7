@@ -231,20 +231,10 @@ element {
   background: none;
 }
 
-.big-logo img {
+#logo {
   display: block;
   position: fixed;
   margin-top: 50px;
-  width: 15%;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
-.small-logo img {
-  display: block;
-  position: fixed;
-  margin-top: 50px;
-  width: 15%;
   left: 50%;
   transform: translate(-50%, 0);
 }
