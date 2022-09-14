@@ -11,32 +11,45 @@
     <title>Anna</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="produkt.css" />
+    <link rel="stylesheet" href="footer.css" />
     <style>
       .data-container {
         display: grid;
-        gap: 10px;
+        gap: 30px;
       }
 
       .article {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        height: 338px;
+        height: fit-content;
         padding: 10px;
         background-color: white;
-        border: solid 1px black;
-        filter: drop-shadow(5px 5px black);
+        border: solid 2px black;
+        box-shadow: 5px 5px #EF64AD;
       }
 
       .picture {
+        aspect-ratio: 1/1;
         max-width: 100%;
         object-fit: cover;
-        max-height: 338px;
+      }
+
+      @media screen and (min-width: 820px) {
+        .data-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .picture {
+          aspect-ratio: none;
+        }
       }
 
       @media screen and (min-width: 1080px) {
         .data-container {
           grid-template-columns: repeat(4, 1fr);
+        }
+        .picture {
+          aspect-ratio: none;
         }
       }
     </style>
@@ -61,57 +74,82 @@
         </div>
       </nav>
     </header>
-
+    <div class="first">
+      <h1>Anna</h1>
+      <img src="IMG/anna_lp.jpg" alt="anna" class="produkt-billede" />
+    </div>
+      <nav class="nav">
+        <button class="filterKnap valgt" data-Type="alle">Alle</button>
+        <button class="filterKnap" data-Type="Bukser">Bukser</button>
+        <button class="filterKnap" data-Type="Jakke">Jakker</button>
+        <button class="filterKnap" data-Type="Bluse">Bluser</button>
+        <button class="filterKnap" data-Type="Sko">Sko</button>
+      </nav>
     <main>
-      <div class="first">
-        <h1>Anna</h1>
-        <img src="IMG/anna_lp.jpg" alt="anna" class="produkt-billede" />
-
-        <nav class="nav">
-          <button class="filterKnap valgt" data-Type="alle">Alle</button>
-          <button class="filterKnap" data-Type="Bukser">Bukser</button>
-          <button class="filterKnap" data-Type="Jakke">Jakker</button>
-          <button class="filterKnap" data-Type="Bluse">Bluser</button>
-          <button class="filterKnap" data-Type="Sko">Sko</button>
-        </nav>
-      </div>
       <section id="popup">
-        <article class="article">
-          <img class="picture" src="" alt="" />
+        <article id="popup-article" class="article">
           <div id="luk"></div>
-          <p class="type"></p>
-          <h2 class="maerke"></h2>
-          <p class="stoerrelse"></p>
-          <div class="dots"></div>
-          <p class="farve"></p>
-          <p class="dot_space">...</p>
-          <p class="pris"></p>
+          <section class="popup-1"><img class="picture" src="" alt="" /></section>
+          <section class="popup-2">
+            <h3 class="type"></h3>
+            <h1 class="maerke"></h1>
+            <h2 class="pris"></h2>
+            <h3 class="farve"></h3>
+            <div class=str-grid>
+              <p id="str1">Størrelser:</p>
+              <a id="str2" href="#">Find din størrelse</a>
+              <div id="str3">
+                <h2 class="stoerrelse"></h2>
+              </div>
+            </div>
+            <a href="#">Størrelsesguide</a>
+            <div class="kurv-grid">
+              <div id="kurv1"><p>LÆG I KURV</p></div>
+              <div id="kurv2"><img src="icons\PhHeartBold.png" alt=""></div>
+            </div>
+            <a href="#">tjek om det er tilgængeligt i butikken</a>
+          </section>
         </article>
       </section>
       <article id="liste">
         <section class="data-container"></section>
         <template>
-          <section class="article" id="menu">
-            <article class="col-1"><img class="picture" src="" alt="" /></article>
-            <article class="col-2">
+          <article class="article" id="menu">
+            <section class="menu-1"><img class="picture" src="" alt="" /></section>
+            <section class="menu-2">
               <h2 class="maerke"></h2>
-              <ul>
-                <li>
-                  <p class="type"></p>
-                </li>
-                <li>
-                  <p class="stoerrelse"></p>
-                </li>
-                <li>
-                  <p class="farve"></p>
-                </li>
-              </ul>
-              <p class="pris"></p>
-            </article>
-          </section>
+                <p><span class="type"></span> - <span class="stoerrelse"></span> - <span class="farve"></span></p>
+                <h2 class="pris"></p>
+            </section>
+        </article>
         </template>
       </article>
     </main>
+    <footer>
+      <div class="col1">
+        <h3>Butik</h3>
+        <p>thriftllama@gmail.com <br />(+45) 29201932</p>
+        <p>Åbningstider</p>
+      </div>
+      <div class="col2">
+        <h3>Vilkår og sikkerhed</h3>
+        <p>Kundeservice</p>
+        <p>Handelsvilkår</p>
+        <p>International fragt</p>
+        <p>Privatlivspolitik</p>
+      </div>
+      <div class="col3">
+        <h3>Info</h3>
+        <p>Thrift Llama</p>
+        <p>Åbeningstider</p>
+        <p>Click and collect</p>
+      </div>
+      <div class="footer_logo">
+        <img src="img/Facebook.svg" alt="Facebook" />
+        <img src="img/instagram.svg" alt="Paris" />
+      </div>
+      <div class="footerp">©Thrift Llama</div>
+    </footer>
     <script>
       const fil = "https://thriftllama-f2e6.restdb.io/rest/kollektion";
       const mereInfo = {
@@ -125,7 +163,7 @@
       let json;
 
       function start() {
-        const filterKnapper = document.querySelectorAll("nav button");
+        const filterKnapper = document.querySelectorAll(".nav button");
         filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerRetter));
         hentData();
       }
@@ -172,7 +210,7 @@
         popup.querySelector(".stoerrelse").textContent = toj.stoerrelse;
         popup.querySelector(".picture").src = "produktbilleder/" + toj.billednavn;
         popup.querySelector(".picture").alt = toj.billednavn;
-        popup.querySelector(".farve").textContent = toj.farve;
+        popup.querySelector(".farve").textContent = "Farve: " + toj.farve;
         popup.querySelector(".pris").textContent = toj.pris + " kr";
       }
 
