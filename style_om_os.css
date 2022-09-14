@@ -55,7 +55,7 @@ header:hover a,
 .header-logo {
   width: 7%;
   margin-bottom: -5%;
-  margin-top: -1%;
+  margin-top: -0.5%;
 }
 
 .header-nav {
@@ -78,7 +78,7 @@ header:hover a,
   position: static;
   align-items: stretch;
   justify-content: space-between;
-  flex: 25 50 25%;
+  flex: 0 0 100%;
   max-width: 100%;
   margin-left: 5%;
   margin-right: 5%;
