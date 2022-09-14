@@ -1,3 +1,24 @@
+* {
+  margin: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+div,
+ul,
+li {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #fafafa;
+}
+
 header {
   display: block;
   position: fixed;
@@ -76,7 +97,12 @@ ul li {
 }
 
 body {
-  background-color: black;
+}
+
+.billede {
+}
+.billede img {
+  width: 50%;
 }
 
 .udforsk-container {
