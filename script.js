@@ -21,11 +21,13 @@ window.onscroll = function (evt) {
   });
 
   var navBar = document.getElementById("header-nav");
-  var logoBar = document.getElementsByClassName("big-logo");
-  if (window.scrollY > 350) {
+  if (window.scrollY > 250) {
     navBar.classList.add("header-active");
+    document.getElementById("logo").style.width = "30vw";
+    document.getElementById("logo").style.transition = "0.5s";
   } else {
     navBar.classList.remove("header-active");
+    document.getElementById("logo").style.width = "50vw";
   }
 };
 
