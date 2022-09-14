@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style_om_os.css" />
+
+    <style>
+      /* FOOTER */
+      footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-decoration: none;
+        list-style: none;
+        text-align: center;
+        padding: 2rem;
+        color: #a5a49f;
+        background-color: whitesmoke;
+      }
+
+      @media (max-width: 600px) {
+        footer {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .col1 {
+          padding-block: 1.5rem;
+        }
+
+        .col2 {
+          padding-block: 1.5rem;
+        }
+
+        .col3 {
+          padding-block: 1.5rem;
+        }
+
+        .footer_logo {
+          display: grid;
+          grid-column: span 4;
+        }
+      }
+
+      footer li {
+        list-style: none;
+        line-height: 1.1rem;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      /* Facebook instagram logo i footer */
+      .footer_logo {
+        display: flex;
+        width: 25%;
+        height: 25%;
+        height: 25%;
+        text-align: center;
+        align-items: center;
+      }
+
+      /* COPYRIGT CENTRERET */
+      .footerp {
+        display: grid;
+        grid-column: span 4;
+        padding-block: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header-nav">
+      <nav>
+        <div class="wrapper">
+          <div class="col">
+            <ul class="nav-shop">
+              <li><a href="produktside-placeholder.html">SHOP</a></li>
+              <li><a href="om_os.html">OM OS</a></li>
+            </ul>
+            <div class="header-logo"><img src="IMG/logo.svg" alt="logo" /></div>
+
+            <ul class="nav-login">
+              <li>
+                <a href="#"><img src="icons/GridiconsSearch.svg" alt="SØG" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="icons/MaterialSymbolsPerson2OutlineRounded.svg" alt="LOGIN" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="icons/PhHeartBold.svg" alt="LIKED" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="icons/PhShoppingBagBold.svg" alt="KURV" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="billede"><img src="IMG/om_os.webp" alt="Billede af unge mennesker" /></div>
+      <div class="om_os_tekst"><p>Tekst</p></div>
+    </main>
+    <footer>
+      <div class="col1">
+        <h3>Butik</h3>
+        <p>thriftllama@gmail.com <br />(+45) 29201932</p>
+        <p>Åbningstider</p>
+      </div>
+      <div class="col2">
+        <h3>Vilkår og sikkerhed</h3>
+        <p>Kundeservice</p>
+        <p>Handelsvilkår</p>
+        <p>International fragt</p>
+        <p>Privatlivspolitik</p>
+      </div>
+      <div class="col3">
+        <h3>Info</h3>
+        <p>Thrift Llama</p>
+        <p>Åbeningstider</p>
+        <p>Click and collect</p>
+      </div>
+      <div class="footer_logo">
+        <img src="img/Facebook.svg" alt="Facebook" />
+        <img src="img/instagram.svg" alt="Paris" />
+      </div>
+      <div class="footerp">©Thrift Llama</div>
+    </footer>
+  </body>
+</html>
