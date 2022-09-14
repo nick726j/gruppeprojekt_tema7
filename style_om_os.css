@@ -7,6 +7,13 @@
 ::after {
   box-sizing: border-box;
 }
+body {
+  font-family: "Familjen Grotesk";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+}
 
 div,
 ul,
@@ -16,7 +23,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #fafafa;
+  color: black;
 }
 
 header {
@@ -28,8 +35,8 @@ header {
   z-index: 10;
   padding: 1rem;
   transition: all 0.5s cubic-bezier(0, 0.7, 0.3, 1);
-  color: white;
-  background: linear-gradient(to bottom, #25211e 0, rgba(37, 33, 30, 0) 100%);
+  color: black;
+  background: #fcf7e8;
 }
 
 header:hover {
@@ -43,6 +50,12 @@ header:hover {
 header:hover a,
 .header-active a {
   color: black;
+}
+
+.header-logo {
+  width: 7%;
+  margin-bottom: -5%;
+  margin-top: -1%;
 }
 
 .header-nav {
@@ -65,8 +78,10 @@ header:hover a,
   position: static;
   align-items: stretch;
   justify-content: space-between;
-  flex: 0 0 100%;
+  flex: 25 50 25%;
   max-width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 ul {
@@ -96,8 +111,6 @@ ul li {
   margin-right: 1rem;
 }
 
-body {
-}
 .om_os_tekst {
   display: flex;
   justify-content: center;
