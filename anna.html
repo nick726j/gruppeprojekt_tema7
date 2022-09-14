@@ -14,7 +14,6 @@
     <style>
       .data-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
       }
 
@@ -25,13 +24,20 @@
         height: 338px;
         padding: 10px;
         background-color: white;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border: solid 1px black;
+        filter: drop-shadow(5px 5px black);
       }
 
       .picture {
         max-width: 100%;
         object-fit: cover;
         max-height: 338px;
+      }
+
+      @media screen and (min-width: 1080px) {
+        .data-container {
+          grid-template-columns: repeat(4, 1fr);
+        }
       }
     </style>
   </head>

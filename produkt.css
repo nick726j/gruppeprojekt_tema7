@@ -121,6 +121,10 @@ h1 {
   color: black;
 }
 
+#menu:hover {
+  background-color: lightgrey;
+}
+
 @media screen and (min-width: 760px) {
   .first {
     padding-inline: 10em;
@@ -168,6 +172,6 @@ h1 {
   background-color: white;
   padding-inline: 1.5em;
   margin: 1em;
-  border: solid 0.1px black;
-  box-shadow: 5px 5px;
+  border: solid 1px black;
+  box-shadow: solid 5px 5px black;
 }
