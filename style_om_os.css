@@ -14,229 +14,136 @@ body {
   line-height: 1.5;
   color: #fff;
 }
-
-div,
-ul,
-li {
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
 header {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  padding: 1rem;
-  transition: all 0.5s cubic-bezier(0, 0.7, 0.3, 1);
-  color: black;
-  background: #fcf7e8;
-}
+  background-color: #FCF7E8;
+  padding: 10px;
 
-header:hover {
-  background: #fff;
 }
-
-.header-active {
-  background: #fff;
-}
-
-header:hover a,
-.header-active a {
-  color: black;
-}
-
-.header-logo {
-  width: 7%;
-  margin-bottom: -5%;
-  margin-top: -0.5%;
-}
-
-.header-nav {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.wrapper {
+#header {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: -7.5px;
-  margin-right: -7.5px;
-}
-
-.col {
-  display: flex;
-  position: static;
-  align-items: stretch;
   justify-content: space-between;
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
+  align-items: center;
+  padding: 0px 20px 0px 20px;
 
-ul {
-  list-style: none;
-  padding: 0;
 }
-
-ul li {
+.header-logo {
+  width: 15%;
+ 
+}
+header a {
   text-decoration: none;
+  font-size: 1.4em;
+  /*text-transform: uppercase;*/
+  color: black;
+  padding: 0px 12px;
+  /*font-family: pt serif;*/
+  line-height: 60px;
 }
 
-.nav-login,
-.nav-shop {
-  display: block;
-  align-items: left;
-  display: flex;
-  font-size: 0.75rem;
+header a:hover {
+  color: #FCF7E8;
 }
 
-.nav-login li {
-  display: block;
-  margin-left: 1rem;
-}
+#menu {
+  max-width: 1200px;
 
-.nav-shop li {
-  display: block;
-  margin-right: 1rem;
-}
+  list-style-type: none;
+  padding: 0;
 
-.om_os_tekst {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5%;
-}
-.billede {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin-top: 10%;
-  margin-bottom: 5%;
-}
-.billede img {
-  width: 100%;
-}
-
-.udforsk-container {
-  position: relative;
-  margin-top: 55vh;
-  width: 100%;
-}
-
-.udforsk {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: 100%;
   text-align: left;
 }
 
-.trigger-container {
-  position: sticky;
-  top: calc(100vh - 34vh);
-  left: 0;
+.hidden {
+  display: none;
+  transform: translateX(-100%);
 }
 
-.trigger {
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid #fff;
-  width: 20px;
+/********* burger *********/
+
+#burgermenu {
+  display: inline-block;
+  max-width: 1200px;
+  margin: 5px 10px;
 }
 
-.butik {
-  width: 100%;
-  color: #fff;
-  font-size: 14px;
-  overflow-x: hidden;
-  margin-top: 5vh;
-}
-
-.butik li {
-  font-size: 2rem;
-  margin: 37px 40px 37px 20px;
-}
-
-.butik li:first-child {
-  font-size: 1rem;
-  margin: 5vh 20px 37px;
-}
-
-.butik li:last-child {
-  font-size: 2rem;
-  margin: 37px 40px 0px 20px;
-  line-height: 1.5 0;
-  padding: 0;
-}
-
-.item:hover {
-  font-size: 3rem;
-}
-
-.space {
-  height: 100px;
-}
-
-footer {
-  height: 400px;
-  background: #f6f6f6;
-  color: #000;
-}
-
-.row {
+#burgermenu img {
+  height: 25px;
   display: flex;
-  flex-wrap: wrap;
-  margin-left: -7.5px;
-  margin-right: -7.5px;
 }
 
-.valgt a {
-  font-size: 3rem;
+nav {
+  position: absolute;
+  align-items: center;
+  z-index: 9999;
+  background-color: #FCF7E8;
+  opacity: 90%;
+  width: 100vw;
 }
 
-element {
-  background: none;
+nav li:first-child {
+  padding-top: 20px;
 }
 
-.big-logo img {
-  display: block;
-  position: fixed;
-  margin-top: 50px;
-  width: 15%;
-  left: 50%;
-  transform: translate(-50%, 0);
+nav li:last-child {
+  padding-bottom: 20px;
 }
 
-.small-logo img {
-  display: block;
-  position: fixed;
-  margin-top: 50px;
-  width: 15%;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
+/********* mediaquery (desktop) *********/
 
-@media (min-width: 915px) {
-}
-
-@media (min-width: 1080px) {
-  .trigger-container {
+@media (min-width: 900px) {
+  #burgermenu {
     display: none;
   }
-  .udforsk-container {
-    position: relative;
-    margin-top: 35vh;
+#header{
+  justify-content: center;
+  margin-top: -5%;
+
+}
+  #menu {
+display: flex;
+text-align: right;
+max-width: 100%;
+justify-content: flex-end;
+align-items: center;
+margin-bottom: 5%;
+  }
+
+  #menu.hidden {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  #menu.hidden ul li :first-child {
+    align-self: flex-start;
+  }
+
+.header-logo {
+    margin-bottom: -15%;
+    margin-top: 6%;}
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    position: static;
+    background-color: #FCF7E8;
+    opacity: 100%;
     width: 100%;
   }
+
+  nav li:first-child {
+    padding-top: 0;
+    padding-right: 1.5rem;
+  }
+
+  nav li:last-child {
+    padding-bottom: 0;
+  }
+
+  header a {
+    font-size: 1.5em;
+    line-height: normal;
+  }
 }
+
+/******** HEADER - SLUT **********
+**********************************
+**********************************
+**********************************
