@@ -16,8 +16,6 @@ body {
 }
 header {
   background-color: #FCF7E8;
-  padding: 10px;
-
 }
 #header {
   display: flex;
@@ -68,6 +66,7 @@ header a:hover {
 
 #burgermenu img {
   height: 25px;
+  margin: 5px;
   display: flex;
 }
 
