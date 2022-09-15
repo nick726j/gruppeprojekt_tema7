@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="produkt.css" />
     <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="header.css">
     <style>
       .data-container {
         display: grid;
@@ -55,25 +56,36 @@
     </style>
   </head>
   <body>
-    <header id="header-nav">
-      <nav>
-        <div class="wrapper">
-          <div class="col">
-            <ul class="nav-shop">
-              <li><a href="produktside-placeholder.html">SHOP</a></li>
-              <li><a href="side3.html">OM OS</a></li>
-              <li><a href="side4.html">KONTAKT</a></li>
-            </ul>
-            <ul class="nav-login">
-              <li><a href="#">SØG</a></li>
-              <li><a href="#">LOGIN</a></li>
-              <li><a href="#">LOVE</a></li>
-              <li><a href="#">KURV</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+     <header>
+    <section id="header">
+      <div id="burgermenu">
+        <img src="icons/CiHamburger.png" alt="burger" />
+      </div>
+      <div class="header-logo">
+        <a href="index.html"><img src="IMG/logo.svg" alt="logo" /></a>
+      </div>
+    </section>
+    <nav id="nav-header">
+      <ul id="menu-header" class="hidden">
+        <li>
+          <a href="index.html">SHOP</a>
+        </li>
+        <li>
+          <a href="#"><img src="icons/GridiconsSearch.png" alt="SØG" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="icons/MaterialSymbolsPerson2OutlineRounded.png" alt="LOGIN" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="icons/PhHeartBold.png" alt="LIKED" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="icons/PhShoppingBagBold.png" alt="KURV" /></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <script src="burger.js"></script>
     <div class="first">
       <h1>Anna</h1>
       <img src="IMG/anna_lp.jpg" alt="anna" class="produkt-billede" />

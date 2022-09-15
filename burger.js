@@ -9,9 +9,9 @@ function SidenVises() {
 function toggleMenu() {
   console.log("toggleMenu");
 
-  document.querySelector("#menu").classList.toggle("hidden");
+  document.querySelector("#menu-header").classList.toggle("hidden");
 
-  let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+  let erSkjult = document.querySelector("#menu-header").classList.contains("hidden");
 
   if (erSkjult == true) {
     document.querySelector("#burgermenu").innerHTML = '<img src = "icons/CiHamburger.png" alt="burger">';
