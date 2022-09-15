@@ -75,7 +75,7 @@ h1 {
   flex-direction: row;
   justify-content: center;
   padding: 1em;
-  width: 75vw;
+  width: fit-content;
   margin: auto;
   background-color: #ffffff;
   height: fit-content;
@@ -282,7 +282,7 @@ h1 {
 
   #popup-article {
     flex-direction: row;
-    width: 90vw;
+    width: fit-content;
     margin: 6rem auto;
     height: fit-content;
   }
@@ -312,7 +312,7 @@ h1 {
   }
 
   #popup-article {
-    width: 70vw;
+    width: fit-content;
     margin: auto;
     height: fit-content;
   }
