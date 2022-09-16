@@ -8,7 +8,7 @@ const maria = document.querySelector(".maria");
 const nicklas = document.querySelector(".nicklas");
 const background = [null, "anna", "louise", "lukas", "maria", "nicklas"];
 const Udforsk = [shop, anna, louise, lukas, maria, nicklas];
-const mediaQuery = window.matchMedia('(min-width: 1080px)')
+const mediaQuery = window.matchMedia("(min-width: 1080px)");
 // scroll menu
 window.onscroll = function (evt) {
   Udforsk.forEach((kategori, i) => {
@@ -20,40 +20,32 @@ window.onscroll = function (evt) {
     }
   });
 
-  // header change
-  var navBar = document.getElementById("header-nav");
-  if (window.scrollY > 50) {
-    navBar.classList.add("header-active");
-  } else {
-    navBar.classList.remove("header-active");
-  }
-  
   // logo resize on scroll
-    if (mediaQuery.matches) {
-      if (window.scrollY > 100) {
-        document.getElementById("logo").style.width = "15vw";
-        document.getElementById("logo").style.transition = "0.5s";
-      } else {
-        document.getElementById("logo").style.width = "25vw";
-      }
+  if (mediaQuery.matches) {
+    if (window.scrollY > 100) {
+      document.getElementById("logo").style.width = "15vw";
+      document.getElementById("logo").style.transition = "0.5s";
     } else {
-      if (window.scrollY > 100) {
-        document.getElementById("logo").style.width = "30vw";
-        document.getElementById("logo").style.transition = "0.5s";
-      } else {
-        document.getElementById("logo").style.width = "50vw";
-      }
+      document.getElementById("logo").style.width = "25vw";
     }
+  } else {
+    if (window.scrollY > 100) {
+      document.getElementById("logo").style.width = "30vw";
+      document.getElementById("logo").style.transition = "0.5s";
+    } else {
+      document.getElementById("logo").style.width = "50vw";
+    }
+  }
 };
 
 // logo resize based on media
 window.onload = function logoSize() {
   if (mediaQuery.matches) {
     document.getElementById("logo").style.width = "25vw";
-  } else { 
+  } else {
     document.getElementById("logo").style.width = "50vw";
   }
-}
+};
 
 // overlap scroll menu
 function overlap(el1, el2) {
